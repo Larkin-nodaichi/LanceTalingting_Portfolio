@@ -4,7 +4,23 @@ html{scroll-behavior:smooth}
 body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 a{text-decoration:none;color:inherit}
 .navbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px 7%;background:rgba(7,17,31,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.logo{font-size:1.7rem;font-weight:800}.logo span{color:var(--accent)}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  transition: 0.25s;
+}
+
+.logo img:hover {
+  transform: scale(1.08);
+}
 nav{display:flex;gap:26px}nav a{color:var(--muted);font-size:.92rem;font-weight:600}nav a:hover{color:var(--accent)}
 .menu-toggle{display:none;background:none;border:0;color:white;font-size:1.6rem}
 .hero{min-height:88vh;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center;padding:90px 8%;background:radial-gradient(circle at 75% 40%,rgba(56,189,248,.15),transparent 28%),radial-gradient(circle at 20% 20%,rgba(129,140,248,.12),transparent 25%)}
